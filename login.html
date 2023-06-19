@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="">
+	<title>Demo php</title>
+
+	<!-- font google -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+	<!-- css -->
+	<link rel="stylesheet" type="text/css" href="style5.css">
+	<!-- <link rel="stylesheet" type="text/css" href="home-phone.css"> -->
+	
+	<!-- js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){	
+		var zy = "";
+		var zp = "";
+		$(".up").submit(function(){
+		
+		var getMail1 = $("input.mail1").val();
+		var getPass1 = $("input.pass1").val();
+		var getPass2 = $("input.pass2").val();
+		var getC = $("input#checkbox").is(":checked");
+		// alert(getC)
+        var xy = 1
+		var y = getPass1;
+		var z = getPass2
+		
+        // if( z == y){
+        //     // alert("Regist success")
+        // }else{
+        //     // alert("Regist fail")
+        // }
+		
+
+        if(getMail1 == ""){
+            $("p.mail_error").text("Please regist your EMAIL !!")
+            xy = 2
+        }else{
+            $("p.mail_error").text("")
+        }
+        
+        if(getPass1 == ""){
+            $("p.pass_error").text("Please enter your PASSWORD !!")
+            xy = 2
+        }else{
+            $("p.pass_error").text("")
+        }
+
+        if(getPass2 == ""){
+            $("p.confirm_error").text("Please enter confirm PASSWORD !!")
+            xy = 2
+        }else{
+            $("p.confirm_error").text("")
+        }
+		
+		if(getC == false){
+			$("p.agree").text("Please enter your tick")
+			xy=2
+		}else{
+			$("p.agree").text("")
+		}
+
+        if(xy == 1 && getPass1 == getPass2){
+			alert("Regist success")
+
+			zy = getMail1
+        	zp = getPass1;
+        }else{
+			alert("Regist fail")
+		}
+		return false;
+	})
+
+		$(".in").submit(function(){
+			var getMail = $("input.mail").val();
+			var getPass = $("input.pass").val();
+			var xx = 1;
+
+			
+
+			console.log(zy);
+			console.log(zp);
+			if(getMail == ""){
+				$("p.enter_mail").text("Please enter your email !!")
+				xx = 2
+			}else{
+				$("p.enter_mail").text("")
+			}
+
+			if(getPass == ""){
+				$("p.enter_pass").text("Please enter your password !!")
+				xx = 2
+			}else{
+				$("p.enter_pass").text("")
+			}
+		
+			if(xx == 1 && getMail == zy && getPass == zp){
+				alert("Login success")
+			}else{
+				alert("Login fail")
+			}
+			
+			return false
+		})
+
+		
+		})
+	</script>
+
+</head>
+
+<body>
+	<!-- top-bar -->
+	<div class="top-bar">
+		<div class="container-top-bar">
+			<div class="currency">
+				<span>Currency :</span>
+				<div class="select">
+					<select>
+						<option value="gbp">GBP</option>
+						<option value="euro">Euro</option>s
+						<option value="dollar">Dollar</option>
+					</select>
+				</div>
+			</div>
+			<div class="sign">
+				<a href="login.html">Register</a>
+				<a href="login.html">Sign In</a>
+				<a class="empty" href="">Empty</a>
+			</div>
+		</div>
+	</div>
+	<!-- header -->
+	<div class="header">
+		<div class="container">
+			<div class="logo">
+				<a href="home.html"><img src="img/logo.png"></a>
+			</div>
+			<div class="menu-header">
+				<ul class="navi1">
+					<li class="main">
+						<a href="">MENS</a>
+						<ul class="sub-navi">
+							<li><span>CASUALS</span>
+								<ul class="sub-navi2">
+									<li><a href="productview.html">Jackets</a></li>
+									<li><a href="productview.html">Hoodies & Sweatshirts</a></li>
+									<li><a href="productview.html">Polo Shirts</a></li>
+									<li><a href="productview.html">Sportwear</a></li>
+									<li><a href="productview.html">Trousers & Chinos</a></li>
+									<li><a href="productview.html">T-Shirts</a></li>
+								</ul>
+							</li>
+							<li><span>FORMAL</span>
+							<ul class="sub-navi2">
+									<li><a href="productview.html">Jackets</a></li>
+									<li><a href="productview.html">Shirts</a></li>
+									<li><a href="productview.html">Suits</a></li>
+									<li><a href="productview.html">Trousers</a></li>
+								</ul>
+							</li>
+							<div class="sale">
+								<p href="">AUTUMN SALE!</p>
+								<p href="">UP TO 50% OFF</p>
+							</div>
+						</ul>
+					</li>
+					<li class="main"><a href="">WOMENS</a></li>
+					<li class="main nosub"><a href="">THE BRAND</a></li>
+					<li class="main nosub"><a href="local store.html">LOCAL STORES</a></li>
+					<li class="main">
+						<a href="">LOOK BOOK</a>
+						<ul class="sub-navi">
+							<li><span>OUR LOOKBOOKS</span>
+								<ul class="sub-navi2">
+									<li><a href="productview.html">Latest Posts (mixed)</a></li>
+									<li><a href="productview.html">Men's Lookbook</a></li>
+									<li><a href="productview.html">Women's Lookbook</a></li>
+									
+								</ul>
+							</li>
+							<li><span>YOUR LOOKBOOKS</span>
+							<ul class="sub-navi2">
+									<li><a href="productview.html">View and Edit</a></li>
+									<li><a href="productview.html">Share</a></li>
+									<li><a href="productview.html">Delete</a></li>
+									
+								</ul>
+							</li>
+							<div class="sale">
+								<p href="">AUTUMN SALE!</p>
+								<p href="">UP TO 50% OFF</p>
+							</div>
+						</ul>
+					</li>
+				</ul>
+				<input class="search" type="text" name="" placeholder="Search...">				
+			</div>
+			
+			<button class="shop-men">SHOP MEN'S COLLECTION</button>
+		</div>
+	</div>
+	<!-- content-login -->
+	<div class="content-login">
+		<div class="welcome">
+			<div class="text">
+				<span style="font-weight: bold;">WELCOME  </span><span>TO AVE</span>
+				<p>SIGN IN OR REGISTER</p>
+			</div>
+		</div>
+	</div>
+	<div class="login">
+		<div class="container container-footer">
+			<div class="sign-in">
+				<span>SIGN IN</span>
+				<form class="in" action="https://www.24h.com.vn/">
+					<input type="text" id="in_mail" name="" class="mail" placeholder="Your Email...">
+					<p class="enter_mail"></p>
+					<input type="password" id="in_pass" class="pass" name="" placeholder="Your Password...">
+					<p class="enter_pass"></p>
+					<button type="submit">SIGN IN</button>
+				</form>
+			</div>
+			<div class="register">
+				<span>REGISTER</span>
+				<p id="success"></p>
+				<form class="up">
+					<input id="up_mail" type="text" class="mail1" name="" placeholder="Your Email...">
+					<p class="mail_error"></p>
+					<input id="up_pass" type="password" class="pass1" name="" placeholder="Your Password...">
+					<p class="pass_error"></p>
+					<input id="up_pass_confirm" type="password" class="pass2" name="" placeholder="Confirm Password...">
+					<p class="confirm_error"></p>
+					<input id="checkbox" type="checkbox" name="">Sign up for exclusive updates, discounts, new arrivals, contents and more!
+					<p class="agree"></p>
+					<button class="register" type="submit">CREATE ACCOUNT</button>
+					<div class="policy">
+						<span class="policy">By clicking 'Create Account', you agree to our </span><a href="">Privecy policy</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div class="footer">
+		<div class="container container-footer">
+			<div class="navi-foot">
+				<ul class="menu-footer">
+					<li class="main">
+						<span>INFORMATION</span>
+						<ul class="sub-footer">
+							<li><a href="">The brand</a></li>
+							<li><a href="">Local store</a></li>
+							<li><a href="">Customer service</a></li>
+							<li><a href="">Privacy & cookies</a></li>
+							<li><a href="">Site map</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>WHY BUY FROM US</span>
+						<ul class="sub-footer">
+							<li><a href="">Shipping & returns</a></li>
+							<li><a href="">Secure shopping</a></li>
+							<li><a href="">Testimonials</a></li>
+							<li><a href="">Award winning</a></li>
+							<li><a href="">Ethical trading</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>YOUR ACCOUNT</span>
+						<ul class="sub-footer">
+							<li><a href="">Sign in</a></li>
+							<li><a href="">Register</a></li>
+							<li><a href="">View cart</a></li>
+							<li><a href="">View your lookbook</a></li>
+							<li><a href="">Track n order</a></li>
+							<li><a href="">Update information</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>LOOKBOOK</span>
+						<ul class="sub-footer">
+							<li><a href="">Latest posts</a></li>
+							<li><a href="">Men's lookbook</a></li>
+							<li><a href="">Women's lookbook</a></li>
+							<li><a href="">Lookbook RSS feed</a></li>
+							<li><a href="">View your lookbook</a></li>
+							<li><a href="">Delete your lookbook</a></li>
+						</ul>
+					</li>
+					<li class="main">
+						<span>CONTACT DETAILS</span>
+						<ul class="sub-footer">
+							<li>Head Office: <a href="">Avenue Fashion.<br>180-182 Regent Street London.</a></li>
+							<li>Telephone: <a href="">0123-456-789</a></li>
+							<li>Email: <a href="">support@yourwebsite.com</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="award">
+				<h1>AWARD WINNER</h1>
+				<h1>FASHION AWARDS 2016</h1>
+			</div>
+			<div class="social">
+				<img src="img/social.png">
+			</div>
+		</div>
+	</div>
+	<!-- bot-bar -->
+	<div class="bot-bar">
+		<div class="bar">
+			<span>© 2016 Avenue Fashion™</span>
+			<span class="design">Design by RobbyDesigns.com 	   Dev by Loremipsum.com</span>
+		</div>
+	</div> 
+
+	
+</body>
+</html>
